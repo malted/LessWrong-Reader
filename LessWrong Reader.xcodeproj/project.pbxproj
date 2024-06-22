@@ -14,6 +14,9 @@
 		EFDA1F122C270360002B81F6 /* LessWrong_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA1F112C270360002B81F6 /* LessWrong_ReaderTests.swift */; };
 		EFDA1F1C2C270360002B81F6 /* LessWrong_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA1F1B2C270360002B81F6 /* LessWrong_ReaderUITests.swift */; };
 		EFDA1F1E2C270360002B81F6 /* LessWrong_ReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA1F1D2C270360002B81F6 /* LessWrong_ReaderUITestsLaunchTests.swift */; };
+		EFDA1F2D2C270763002B81F6 /* XMLParsing in Frameworks */ = {isa = PBXBuildFile; productRef = EFDA1F2C2C270763002B81F6 /* XMLParsing */; };
+		EFDA1F342C271D14002B81F6 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = EFDA1F332C271D14002B81F6 /* MarkdownUI */; };
+		EFDA1F372C271E27002B81F6 /* SwiftHTMLtoMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = EFDA1F362C271E27002B81F6 /* SwiftHTMLtoMarkdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDA1F372C271E27002B81F6 /* SwiftHTMLtoMarkdown in Frameworks */,
+				EFDA1F2D2C270763002B81F6 /* XMLParsing in Frameworks */,
+				EFDA1F342C271D14002B81F6 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 				EFDA1F102C270360002B81F6 /* LessWrong ReaderTests */,
 				EFDA1F1A2C270360002B81F6 /* LessWrong ReaderUITests */,
 				EFDA1EFD2C27035E002B81F6 /* Products */,
+				EFDA1F2B2C270763002B81F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,13 @@
 			path = "LessWrong ReaderUITests";
 			sourceTree = "<group>";
 		};
+		EFDA1F2B2C270763002B81F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +159,11 @@
 			dependencies = (
 			);
 			name = "LessWrong Reader";
+			packageProductDependencies = (
+				EFDA1F2C2C270763002B81F6 /* XMLParsing */,
+				EFDA1F332C271D14002B81F6 /* MarkdownUI */,
+				EFDA1F362C271E27002B81F6 /* SwiftHTMLtoMarkdown */,
+			);
 			productName = "LessWrong Reader";
 			productReference = EFDA1EFC2C27035E002B81F6 /* LessWrong Reader.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +236,11 @@
 				Base,
 			);
 			mainGroup = EFDA1EF32C27035E002B81F6;
+			packageReferences = (
+				EFDA1F2A2C270672002B81F6 /* XCRemoteSwiftPackageReference "XMLParsing" */,
+				EFDA1F322C271CF2002B81F6 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				EFDA1F352C271E1F002B81F6 /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */,
+			);
 			productRefGroup = EFDA1EFD2C27035E002B81F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -617,6 +641,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFDA1F2A2C270672002B81F6 /* XCRemoteSwiftPackageReference "XMLParsing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ShawnMoore/XMLParsing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+		EFDA1F322C271CF2002B81F6 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		EFDA1F352C271E1F002B81F6 /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ActuallyTaylor/SwiftHTMLToMarkdown";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFDA1F2C2C270763002B81F6 /* XMLParsing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFDA1F2A2C270672002B81F6 /* XCRemoteSwiftPackageReference "XMLParsing" */;
+			productName = XMLParsing;
+		};
+		EFDA1F332C271D14002B81F6 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFDA1F322C271CF2002B81F6 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		EFDA1F362C271E27002B81F6 /* SwiftHTMLtoMarkdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFDA1F352C271E1F002B81F6 /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */;
+			productName = SwiftHTMLtoMarkdown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFDA1EF42C27035E002B81F6 /* Project object */;
 }
