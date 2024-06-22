@@ -4,4 +4,4 @@
 
 ### macOS
 ![image](https://github.com/malted/LessWrong-Reader/assets/59726149/20e4fcbe-6d73-45a6-9c56-1dbb0704e395)
-![Uploading image.png…]()
+![image](https://github.com/malted/LessWrong-Reader/assets/59726149/f31c9552-e0b4-4389-965b-da8326a0d28d)
